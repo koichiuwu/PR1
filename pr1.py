@@ -61,7 +61,7 @@ def simulate(countries):
             city.update()
         day += 1
         for country in countries:
-            if country.name not in completed and country.is_complete(set(completed.keys())):
+            if country.name not in completed and country.is_complete(all_country_names):
                 completed[country.name] = day
 
     return completed
